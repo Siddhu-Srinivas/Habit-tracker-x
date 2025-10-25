@@ -1,0 +1,78 @@
+.notification {
+	position: fixed;
+	top: calc(var(--header-height) + 1rem);
+	right: 1rem;
+	background: var(--gradient-warning);
+	border-radius: var(--border-radius-primary);
+	padding: 1.2rem;
+	box-shadow: 0 8px 32px rgba(250, 112, 154, 0.4);
+	color: white;
+	z-index: 100;
+	min-width: 280px;
+	animation: slideInLeft 0.4s ease-out, slideOutRight 0.4s ease-in 3.5s forwards;
+}
+
+.notification.milestone {
+	background: linear-gradient(135deg, #f093fb 0%, #f5576c 50%, #ffd700 100%);
+	box-shadow: 0 8px 32px rgba(250, 112, 154, 0.6);
+	animation: pulse 0.6s ease-out, slideOutRight 0.4s ease-in 3.5s forwards;
+}
+
+.content {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.icon {
+	font-size: 2rem;
+	animation: bounce 0.6s ease-out;
+	flex-shrink: 0;
+}
+
+.text {
+	flex: 1;
+}
+
+.text h4 {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 600;
+	opacity: 0.95;
+}
+
+.text p {
+	margin: 0.4rem 0 0 0;
+	font-size: 0.9rem;
+	font-weight: 500;
+	opacity: 0.9;
+}
+
+@keyframes slideOutRight {
+	from {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(400px);
+	}
+}
+
+@keyframes bounce {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.notification {
+		right: 0.5rem;
+		left: 0.5rem;
+		top: calc(var(--header-height) + 0.5rem);
+		min-width: auto;
+	}
+}

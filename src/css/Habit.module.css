@@ -1,8 +1,17 @@
 .habit {
 	/* position: relative; */
-	background-color: var(--bg-color-primary);
+	background: var(--bg-color-primary);
 	border-radius: var(--border-radius-primary);
 	overflow: hidden;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	animation: fadeInUp 0.5s ease-out;
+	cursor: pointer;
+}
+
+.habit:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
 }
 
 .content {

@@ -6,6 +6,8 @@ import Diary from '../components/Diary/Diary';
 import HabitEditor from '../components/HabitEditor/HabitEditor';
 import Menu from '../components/Menu/Menu';
 import Statistics from '../components/Statistics/Statistics';
+import DietModal from '../components/Diet/DietModal';
+import CalendarModal from '../components/Calendar/CalendarModal';
 
 const modalRoutes = [
 	{
@@ -35,6 +37,14 @@ const modalRoutes = [
 	{
 		path: 'menu',
 		element: <Menu />
+	},
+	{
+ 		path: 'diet',
+ 		element: <DietModal />
+ 	},
+	{
+		path: 'calendar',
+		element: <CalendarModal />
 	},
 	{
 		path: 'statistics',

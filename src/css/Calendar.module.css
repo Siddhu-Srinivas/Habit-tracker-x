@@ -1,3 +1,20 @@
+.calendarContainer {
+  padding: 1rem;
+  max-height: 80vh;
+  overflow: auto;
+}
+.header { display:flex; justify-content:space-between; align-items:center; margin-bottom:0.8rem }
+.titleWrap{ display:flex; align-items:center; gap:0.6rem }
+.icon{ font-size:1.4rem; color:#7b61ff }
+.controls{ display:flex; gap:0.5rem; align-items:center }
+.controls button{ padding:0.35rem 0.6rem; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background:rgba(255,255,255,0.02) }
+.monthLabel{ font-weight:700 }
+.grid{ display:grid; grid-template-columns: repeat(7, 1fr); gap:0.4rem }
+.weekday{ font-size:0.75rem; color:rgba(255,255,255,0.7); text-align:center }
+.pad{ height:48px }
+.day{ height:48px; display:flex; align-items:flex-start; justify-content:flex-end; padding:6px; border-radius:8px; background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03); cursor:pointer }
+.dayNum{ font-weight:700 }
+.marked{ box-shadow:0 8px 24px rgba(79,172,254,0.18); border:1px solid rgba(79,172,254,0.4); background:linear-gradient(135deg,#4facfe33,#00f2fe22) }
 .calendar {
 	/* outline: 1px solid red; */
 	display: grid;

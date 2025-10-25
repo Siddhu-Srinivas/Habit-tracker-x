@@ -7,6 +7,8 @@ import { motion } from 'framer-motion';
 import FirebaseHeader from './FirebaseHeader';
 import HabitList from './HabitList';
 import Placeholder from './Placeholder';
+import DailyGoal from './DailyGoal';
+import HabitStats from './HabitStats';
 
 // icons
 import { ReactComponent as Calendar } from '../img/calendar.svg';
@@ -48,6 +50,13 @@ function FirebaseMainPage() {
 	return (
 		<motion.div className={styles.mainPage} {...mainVariants}>
 			<FirebaseHeader />
+
+			{filteredHabits.length > 0 && (
+				<>
+					<HabitStats habits={filteredHabits} />
+					<DailyGoal habits={filteredHabits} />
+				</>
+			)}
 
 			{/* Only render HabitList when we have valid data */}
 			{Array.isArray(filteredHabits) && (

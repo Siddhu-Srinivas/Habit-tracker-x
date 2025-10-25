@@ -24,6 +24,12 @@
 	--border-radius-tertiary: 0.4rem;
 
 	--input-height-primary: 3rem;
+	
+	/* Dark green flame theme */
+	--gradient-primary: linear-gradient(90deg, #052e16 0%, #064e2a 25%, #0a8a45 60%, #2dd36a 100%);
+	--gradient-secondary: linear-gradient(135deg, #073b1f 0%, #0b5a31 100%);
+	--gradient-success: linear-gradient(135deg, #0a8a45 0%, #2dd36a 100%);
+	--gradient-warning: linear-gradient(135deg, #1b5e20 0%, #3fb54a 100%);
 }
 
 body {
@@ -68,4 +74,44 @@ li {
 
 .no-scroll {
 	overflow: hidden;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes pulse {
+	0%, 100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.7;
+	}
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: -1000px 0;
+	}
+	100% {
+		background-position: 1000px 0;
+	}
 }

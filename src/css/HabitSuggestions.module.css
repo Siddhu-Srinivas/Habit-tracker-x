@@ -1,0 +1,81 @@
+.suggestionsContainer {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border-radius: var(--border-radius-primary);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.suggestionsTitle {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.2rem;
+    color: #e6e6e6;
+    text-align: center;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.suggestionsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.suggestionItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+    border-radius: var(--border-radius-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.suggestionItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.suggestionIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-primary);
+    border-radius: var(--border-radius-secondary);
+    font-size: 1.2rem;
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.suggestionInfo h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: #e6e6e6;
+    letter-spacing: 0.5px;
+}
+
+.suggestionInfo p {
+    margin: 0.3rem 0 0 0;
+    font-size: 0.85rem;
+    color: gray;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

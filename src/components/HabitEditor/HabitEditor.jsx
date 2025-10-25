@@ -21,9 +21,9 @@ import Button from '../Button';
 import checkHabitTitleExistence from '../../utils/checkHabitTitleExistence';
 
 // icons
-import { MdAddToPhotos } from 'react-icons/md';
-import { MdDeleteForever } from 'react-icons/md';
+import { MdAddToPhotos, MdDeleteForever } from 'react-icons/md';
 import { HiArchiveBoxArrowDown } from 'react-icons/hi2';
+import HabitSuggestions from './HabitSuggestions';
 
 function HabitEditor() {
 
@@ -112,12 +112,18 @@ function HabitEditor() {
 					{...{ habits, currentIconTitle: habit?.iconTitle }}
 				/>
 
-				<small
-					// style={{ paddingBottom: isEditMode ? '8rem' : '5rem' }}
-					className={styles.info}
-				>
+				<small className={styles.info}>
 					'Color' and 'Icon' icons in reduced size indicate that they have been previously used (but can be reused).
 				</small>
+
+				{!isEditMode && (
+					<HabitSuggestions 
+						onSelect={(habit) => {
+							setInputTitle(habit.title);
+							// You can also set other properties like color and icon here
+						}}
+					/>
+				)}
 
 				<div className={styles.btnsWrapper}>
 					{isEditMode && (

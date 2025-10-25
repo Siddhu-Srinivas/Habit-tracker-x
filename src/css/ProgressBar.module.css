@@ -12,6 +12,8 @@
 .segment {
 	height: 100%;
 	width: 100%;
+	transition: all 0.3s ease;
+	animation: pulse 2s infinite;
 }
 
 .segment.first {
@@ -20,4 +22,9 @@
 
 .segment.last {
 	border-radius: var(--border-radius-secondary) 0 0 0;
+}
+
+.segment:hover {
+	filter: brightness(1.2);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }

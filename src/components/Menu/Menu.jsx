@@ -9,13 +9,9 @@ import MenuItem from './MenuItem';
 // import clearLocalStorage from '../../utils/clearLocalStorage'; // Removed - using Firebase
 
 // icons
-import { BsFillDatabaseFill } from "react-icons/bs";
-import { FaGithub, FaPaintBrush } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { ImFire } from "react-icons/im";
-import { HiArchiveBox } from "react-icons/hi2";
-
-const PUBLIC_URL = process.env.PUBLIC_URL;
 
 function Menu() {
 	return (
